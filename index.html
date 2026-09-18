@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RodaRoad form</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Diari de Ruta</h1>
+    <section id="driver">
+      <h2>Conductor</h2>
+      <label for="driverName">Nom del conductor</label>
+      <input type="text" name="driverName" id="driverName" required />
+      <label for="driverNumber">N'umero de conductor</label>
+      <input type="text" name="driverNumber" id="driverNumber" required />
+      <label for="dualDriving">
+        <input type="checkbox" name="dualDriving" id="dualDriving" />
+        Conducció doble
+      </label>
+    </section>
+    <section id="vehicle">
+      <h2>Vehicle</h2>
+
+      <label for="truckNumber">Número de camió</label>
+      <input type="text" name="truckNumber" id="truckNumber" required />
+
+      <label for="tractorPlate">Matrícula tractora</label>
+      <input type="text" name="tractorPlate" id="tractorPlate" required />
+
+      <label for="trailerPlate">Matrícula remolc</label>
+      <input type="text" name="trailerPlate" id="trailerPlate" required />
+
+      <label for="refueled">Has fet repostatge</label>
+      <select name="refueled" id="refueled">
+        <option value="no">No</option>
+        <option value="yes">Sí</option>
+      </select>
+      <div id="refuelSection">
+        <label for="fuelLocation">Lloc del repostatge</label>
+        <input type="text" name="fuelLocation" id="fuelLocation" />
+
+        <label for="fuelDieselA">Gasoil A (litres)</label>
+        <input
+          type="number"
+          name="fuelDieselA"
+          id="fuelDieselA"
+          min="0"
+          step="0.01"
+        />
+
+        <label for="fuelDieselA">Gasoil B (litres)</label>
+        <input
+          type="number"
+          name="fuelDieselB"
+          id="fuelDieselB"
+          min="0"
+          step="0.01"
+        />
+
+        <label for="fuelDieselA">AdBlue (litres)</label>
+        <input
+          type="number"
+          name="fuelAdBlue"
+          id="fuelAdBlue"
+          min="0"
+          step="0.01"
+        />
+
+        <label for="fuelGas">Gas (Kg)</label>
+        <input type="number" name="fuelGas" id="fuelGas" min="0" step="0.01" />
+
+        <label for="fuelKm">Quilómetres</label>
+        <input type="number" name="fuelKm" id="fuelKm" />
+      </div>
+    </section>
+    <section id="trip"><h2>Viatge</h2></section>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
