@@ -2,8 +2,10 @@
 section {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 0.3rem 1rem;
+  gap: 0.4rem 1.2rem;
   align-items: center;
+  padding: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 section label {
@@ -16,14 +18,60 @@ section textarea {
   grid-column: 2;
 }
 
+h2,
 h3 {
   grid-column: 1 / -1;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--color-primary);
 }
 
 button {
   grid-column: 1 / -1;
+}
+
+#refuelSection {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4rem 1.2rem;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1.2rem;
+  background-color: rgba(251, 191, 36, 0.05);
+  border-radius: 6px;
+}
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+    gap: 0.3rem 0.8rem;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  section label {
+    grid-column: 1;
+  }
+  section input,
+  section select,
+  section textarea {
+    grid-column: 1;
+  }
+  #refuelSection {
+    grid-template-columns: 1fr;
+    gap: 0.3rem 0.8rem;
+    padding: 0.8rem;
+  }
+  h2,
+  h3 {
+    grid-column: 1;
+  }
+  button {
+    grid-column: 1;
+  }
 }

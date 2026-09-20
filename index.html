@@ -9,10 +9,10 @@
   <body>
     <h1>Diari de Ruta</h1>
     <section id="driver">
-      <h2>Conductor</h2>
-      <label for="driverName">Nom del conductor</label>
+      <h2><i data-lucide="user"></i> Conductor</h2>
+      <label for="driverName"><i data-lucide="badge"></i> Nom del conductor</label>
       <input type="text" name="driverName" id="driverName" required />
-      <label for="driverNumber">Número de conductor</label>
+      <label for="driverNumber"><i data-lucide="hash"></i> Número de conductor</label>
       <input type="text" name="driverNumber" id="driverNumber" required />
       <label for="dualDriving">
         <input type="checkbox" name="dualDriving" id="dualDriving" />
@@ -20,27 +20,27 @@
       </label>
     </section>
     <section id="vehicle">
-      <h2>Vehicle</h2>
+      <h2><i data-lucide="truck"></i> Vehicle</h2>
 
-      <label for="truckNumber">Número de camió</label>
+      <label for="truckNumber"><i data-lucide="hash"></i> Número de camió</label>
       <input type="text" name="truckNumber" id="truckNumber" required />
 
-      <label for="tractorPlate">Matrícula tractora</label>
+      <label for="tractorPlate"><i data-lucide="rectangle-horizontal"></i> Matrícula tractora</label>
       <input type="text" name="tractorPlate" id="tractorPlate" required />
 
-      <label for="trailerPlate">Matrícula remolc</label>
+      <label for="trailerPlate"><i data-lucide="rectangle-horizontal"></i> Matrícula remolc</label>
       <input type="text" name="trailerPlate" id="trailerPlate" required />
 
-      <label for="refueled">Has fet repostatge</label>
+      <label for="refueled"><i data-lucide="fuel"></i> Has fet repostatge</label>
       <select name="refueled" id="refueled">
         <option value="no">No</option>
         <option value="yes">Sí</option>
       </select>
       <div id="refuelSection">
-        <label for="fuelLocation">Lloc del repostatge</label>
+        <label for="fuelLocation"><i data-lucide="map-pin"></i> Lloc del repostatge</label>
         <input type="text" name="fuelLocation" id="fuelLocation" />
 
-        <label for="fuelDieselA">Gasoil A (litres)</label>
+        <label for="fuelDieselA"><i data-lucide="droplets"></i> Gasoil A (litres)</label>
         <input
           type="number"
           name="fuelDieselA"
@@ -49,7 +49,7 @@
           step="0.01"
         />
 
-        <label for="fuelDieselB">Gasoil B (litres)</label>
+        <label for="fuelDieselB"><i data-lucide="droplets"></i> Gasoil B (litres)</label>
         <input
           type="number"
           name="fuelDieselB"
@@ -58,7 +58,7 @@
           step="0.01"
         />
 
-        <label for="fuelAdBlue">AdBlue (litres)</label>
+        <label for="fuelAdBlue"><i data-lucide="droplet"></i> AdBlue (litres)</label>
         <input
           type="number"
           name="fuelAdBlue"
@@ -67,43 +67,43 @@
           step="0.01"
         />
 
-        <label for="fuelGas">Gas (Kg)</label>
+        <label for="fuelGas"><i data-lucide="flame"></i> Gas (Kg)</label>
         <input type="number" name="fuelGas" id="fuelGas" min="0" step="0.01" />
 
-        <label for="fuelKm">Quilómetres</label>
+        <label for="fuelKm"><i data-lucide="gauge"></i> Quilómetres</label>
         <input type="number" name="fuelKm" id="fuelKm" />
       </div>
     </section>
     <section id="trip">
-      <h2>Viatge</h2>
-      <label for="client"> Client/Empresa </label>
+      <h2><i data-lucide="map-pin"></i> Viatge</h2>
+      <label for="client"><i data-lucide="building-2"></i> Client/Empresa</label>
       <input type="text" name="client" id="client" required />
-      <label for="startCity"> Ciutat d'inici </label>
+      <label for="startCity"><i data-lucide="map-pin"></i> Ciutat d'inici</label>
       <input type="text" name="startCity" id="startCity" required />
-      <label for="startDate"> Data de sortida </label>
+      <label for="startDate"><i data-lucide="calendar"></i> Data de sortida</label>
       <input type="date" name="startDate" id="startDate" required />
-      <label for="startTime"> Hora de sortida </label>
+      <label for="startTime"><i data-lucide="clock"></i> Hora de sortida</label>
       <input type="time" name="startTime" id="startTime" required />
-      <label for="endCity"> Ciutat d'arribada </label>
+      <label for="endCity"><i data-lucide="flag"></i> Ciutat d'arribada</label>
       <input type="text" name="endCity" id="endCity" required />
-      <label for="endDate"> Data d'arribada </label>
+      <label for="endDate"><i data-lucide="calendar-check"></i> Data d'arribada</label>
       <input type="date" name="endDate" id="endDate" required />
-      <label for="endTime"> Hora d'arribada </label>
+      <label for="endTime"><i data-lucide="clock-3"></i> Hora d'arribada</label>
       <input type="time" name="endTime" id="endTime" required />
-      <h3>Càrregues</h3>
+      <h3><i data-lucide="package-plus"></i> Càrregues</h3>
       <div id="loadsContainer"></div>
-      <button type="button" id="addLoad">Afegir càrrega</button>
-      <h3>Descàrregues</h3>
+      <button type="button" id="addLoad">+ Afegir càrrega</button>
+      <h3><i data-lucide="package-minus"></i> Descàrregues</h3>
       <div id="unloadsContainer"></div>
-      <button type="button">Afegir descàrrega</button>
-      <h3>Quilòmetres</h3>
-      <label for="kmStart"> Quilòmetres inicials </label>
+      <button type="button">+ Afegir descàrrega</button>
+      <h3><i data-lucide="gauge"></i> Quilòmetres</h3>
+      <label for="kmStart"><i data-lucide="play"></i> Quilòmetres inicials</label>
       <input type="number" name="kmStart" id="kmStart" required />
-      <label for="kmEnd"> Quilòmetres finals </label>
-      <input type="number" name="kmEnd" id=" kmEnd" required />
-      <label for="kmTotal"> Quilòmetres totals </label>
+      <label for="kmEnd"><i data-lucide="flag"></i> Quilòmetres finals</label>
+      <input type="number" name="kmEnd" id="kmEnd" required />
+      <label for="kmTotal"><i data-lucide="route"></i> Quilòmetres totals</label>
       <input type="text" name="kmTotal" id="kmTotal" readonly />
-      <label for="driveTime"> Temps de conducció </label>
+      <label for="driveTime"><i data-lucide="timer"></i> Temps de conducció</label>
       <input
         type="text"
         name="driveTime"
@@ -111,15 +111,15 @@
         placeholder="ex: 8H30"
         required
       />
-      <h3>Observacions</h3>
+      <h3><i data-lucide="file-text"></i> Observacions</h3>
       <textarea
         name="observations"
         id="observations"
         rows="4"
         placeholder="Incidents, notes..."
       ></textarea>
-      <h3>Adjunts</h3>
-      <label for="fuelReceipts"> Tiquets de repostatge </label>
+      <h3><i data-lucide="paperclip"></i> Adjunts</h3>
+      <label for="fuelReceipts"><i data-lucide="receipt"></i> Tiquets de repostatge</label>
       <input
         type="file"
         name="fuelReceipts"
@@ -127,7 +127,7 @@
         accept="image/*"
         multiple
       />
-      <label for="waybills"> Albarans </label>
+      <label for="waybills"><i data-lucide="file-check"></i> Albarans</label>
       <input
         type="file"
         name="waybills"
@@ -135,16 +135,20 @@
         accept="image/*"
         multiple
       />
-      <label for="otherDocs"> Altra documentació </label>
+      <label for="otherDocs"><i data-lucide="folder-open"></i> Altra documentació</label>
       <input
         type="file"
         name="otherDocs"
         id="otherDocs"
-        accept="image/*"
+        accept="image/*,.pdf"
         multiple
       />
     </section>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
