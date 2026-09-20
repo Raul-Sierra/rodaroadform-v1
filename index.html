@@ -7,12 +7,24 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Diari de Ruta</h1>
+    <header class="app-header">
+      <div class="logo-icon">
+        <i data-lucide="truck"></i>
+      </div>
+      <div>
+        <h1>Diari de Ruta</h1>
+        <p class="subtitle">Formulari de conductors</p>
+      </div>
+    </header>
     <section id="driver">
       <h2><i data-lucide="user"></i> Conductor</h2>
-      <label for="driverName"><i data-lucide="badge"></i> Nom del conductor</label>
+      <label for="driverName"
+        ><i data-lucide="badge"></i> Nom del conductor</label
+      >
       <input type="text" name="driverName" id="driverName" required />
-      <label for="driverNumber"><i data-lucide="hash"></i> Número de conductor</label>
+      <label for="driverNumber"
+        ><i data-lucide="hash"></i> Número de conductor</label
+      >
       <input type="text" name="driverNumber" id="driverNumber" required />
       <label for="dualDriving">
         <input type="checkbox" name="dualDriving" id="dualDriving" />
@@ -22,25 +34,37 @@
     <section id="vehicle">
       <h2><i data-lucide="truck"></i> Vehicle</h2>
 
-      <label for="truckNumber"><i data-lucide="hash"></i> Número de camió</label>
+      <label for="truckNumber"
+        ><i data-lucide="hash"></i> Número de camió</label
+      >
       <input type="text" name="truckNumber" id="truckNumber" required />
 
-      <label for="tractorPlate"><i data-lucide="rectangle-horizontal"></i> Matrícula tractora</label>
+      <label for="tractorPlate"
+        ><i data-lucide="rectangle-horizontal"></i> Matrícula tractora</label
+      >
       <input type="text" name="tractorPlate" id="tractorPlate" required />
 
-      <label for="trailerPlate"><i data-lucide="rectangle-horizontal"></i> Matrícula remolc</label>
+      <label for="trailerPlate"
+        ><i data-lucide="rectangle-horizontal"></i> Matrícula remolc</label
+      >
       <input type="text" name="trailerPlate" id="trailerPlate" required />
 
-      <label for="refueled"><i data-lucide="fuel"></i> Has fet repostatge</label>
+      <label for="refueled"
+        ><i data-lucide="fuel"></i> Has fet repostatge</label
+      >
       <select name="refueled" id="refueled">
         <option value="no">No</option>
         <option value="yes">Sí</option>
       </select>
       <div id="refuelSection">
-        <label for="fuelLocation"><i data-lucide="map-pin"></i> Lloc del repostatge</label>
+        <label for="fuelLocation"
+          ><i data-lucide="map-pin"></i> Lloc del repostatge</label
+        >
         <input type="text" name="fuelLocation" id="fuelLocation" />
 
-        <label for="fuelDieselA"><i data-lucide="droplets"></i> Gasoil A (litres)</label>
+        <label for="fuelDieselA"
+          ><i data-lucide="droplets"></i> Gasoil A (litres)</label
+        >
         <input
           type="number"
           name="fuelDieselA"
@@ -49,7 +73,9 @@
           step="0.01"
         />
 
-        <label for="fuelDieselB"><i data-lucide="droplets"></i> Gasoil B (litres)</label>
+        <label for="fuelDieselB"
+          ><i data-lucide="droplets"></i> Gasoil B (litres)</label
+        >
         <input
           type="number"
           name="fuelDieselB"
@@ -58,7 +84,9 @@
           step="0.01"
         />
 
-        <label for="fuelAdBlue"><i data-lucide="droplet"></i> AdBlue (litres)</label>
+        <label for="fuelAdBlue"
+          ><i data-lucide="droplet"></i> AdBlue (litres)</label
+        >
         <input
           type="number"
           name="fuelAdBlue"
@@ -76,17 +104,25 @@
     </section>
     <section id="trip">
       <h2><i data-lucide="map-pin"></i> Viatge</h2>
-      <label for="client"><i data-lucide="building-2"></i> Client/Empresa</label>
+      <label for="client"
+        ><i data-lucide="building-2"></i> Client/Empresa</label
+      >
       <input type="text" name="client" id="client" required />
-      <label for="startCity"><i data-lucide="map-pin"></i> Ciutat d'inici</label>
+      <label for="startCity"
+        ><i data-lucide="map-pin"></i> Ciutat d'inici</label
+      >
       <input type="text" name="startCity" id="startCity" required />
-      <label for="startDate"><i data-lucide="calendar"></i> Data de sortida</label>
+      <label for="startDate"
+        ><i data-lucide="calendar"></i> Data de sortida</label
+      >
       <input type="date" name="startDate" id="startDate" required />
       <label for="startTime"><i data-lucide="clock"></i> Hora de sortida</label>
       <input type="time" name="startTime" id="startTime" required />
       <label for="endCity"><i data-lucide="flag"></i> Ciutat d'arribada</label>
       <input type="text" name="endCity" id="endCity" required />
-      <label for="endDate"><i data-lucide="calendar-check"></i> Data d'arribada</label>
+      <label for="endDate"
+        ><i data-lucide="calendar-check"></i> Data d'arribada</label
+      >
       <input type="date" name="endDate" id="endDate" required />
       <label for="endTime"><i data-lucide="clock-3"></i> Hora d'arribada</label>
       <input type="time" name="endTime" id="endTime" required />
@@ -97,13 +133,19 @@
       <div id="unloadsContainer"></div>
       <button type="button">+ Afegir descàrrega</button>
       <h3><i data-lucide="gauge"></i> Quilòmetres</h3>
-      <label for="kmStart"><i data-lucide="play"></i> Quilòmetres inicials</label>
+      <label for="kmStart"
+        ><i data-lucide="play"></i> Quilòmetres inicials</label
+      >
       <input type="number" name="kmStart" id="kmStart" required />
       <label for="kmEnd"><i data-lucide="flag"></i> Quilòmetres finals</label>
       <input type="number" name="kmEnd" id="kmEnd" required />
-      <label for="kmTotal"><i data-lucide="route"></i> Quilòmetres totals</label>
+      <label for="kmTotal"
+        ><i data-lucide="route"></i> Quilòmetres totals</label
+      >
       <input type="text" name="kmTotal" id="kmTotal" readonly />
-      <label for="driveTime"><i data-lucide="timer"></i> Temps de conducció</label>
+      <label for="driveTime"
+        ><i data-lucide="timer"></i> Temps de conducció</label
+      >
       <input
         type="text"
         name="driveTime"
@@ -111,6 +153,36 @@
         placeholder="ex: 8H30"
         required
       />
+      <label for="perDiemCountry"><i data-lucide="earth"></i> Dieta / País</label>
+      <select id="perDiemCountry" name="perDiemCountry" required>
+        <option value="">Selecciona país</option>
+        <option value="AT">Àustria</option>
+        <option value="BE">Bèlgica</option>
+        <option value="BG">Bulgària</option>
+        <option value="HR">Croàcia</option>
+        <option value="DK">Dinamarca</option>
+        <option value="SK">Eslovàquia</option>
+        <option value="SI">Eslovènia</option>
+        <option value="ES">Espanya</option>
+        <option value="EE">Estònia</option>
+        <option value="FI">Finlàndia</option>
+        <option value="FR">França</option>
+        <option value="DE">Alemanya</option>
+        <option value="GR">Grècia</option>
+        <option value="HU">Hongria</option>
+        <option value="IE">Irlanda</option>
+        <option value="IT">Itàlia</option>
+        <option value="LV">Letònia</option>
+        <option value="LT">Lituània</option>
+        <option value="LU">Luxemburg</option>
+        <option value="MT">Malta</option>
+        <option value="NL">Països Baixos</option>
+        <option value="PL">Polònia</option>
+        <option value="PT">Portugal</option>
+        <option value="CZ">República Txeca</option>
+        <option value="RO">Romania</option>
+        <option value="SE">Suècia</option>
+      </select>
       <h3><i data-lucide="file-text"></i> Observacions</h3>
       <textarea
         name="observations"
@@ -119,7 +191,9 @@
         placeholder="Incidents, notes..."
       ></textarea>
       <h3><i data-lucide="paperclip"></i> Adjunts</h3>
-      <label for="fuelReceipts"><i data-lucide="receipt"></i> Tiquets de repostatge</label>
+      <label for="fuelReceipts"
+        ><i data-lucide="receipt"></i> Tiquets de repostatge</label
+      >
       <input
         type="file"
         name="fuelReceipts"
@@ -135,7 +209,9 @@
         accept="image/*"
         multiple
       />
-      <label for="otherDocs"><i data-lucide="folder-open"></i> Altra documentació</label>
+      <label for="otherDocs"
+        ><i data-lucide="folder-open"></i> Altra documentació</label
+      >
       <input
         type="file"
         name="otherDocs"
