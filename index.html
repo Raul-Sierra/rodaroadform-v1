@@ -12,7 +12,7 @@
       <h2>Conductor</h2>
       <label for="driverName">Nom del conductor</label>
       <input type="text" name="driverName" id="driverName" required />
-      <label for="driverNumber">N'umero de conductor</label>
+      <label for="driverNumber">Número de conductor</label>
       <input type="text" name="driverNumber" id="driverNumber" required />
       <label for="dualDriving">
         <input type="checkbox" name="dualDriving" id="dualDriving" />
@@ -74,7 +74,76 @@
         <input type="number" name="fuelKm" id="fuelKm" />
       </div>
     </section>
-    <section id="trip"><h2>Viatge</h2></section>
+    <section id="trip">
+      <h2>Viatge</h2>
+      <label for="client"> Client/Empresa </label>
+      <input type="text" name="client" id="client" required />
+      <label for="startCity"> Ciutat d'inici </label>
+      <input type="text" name="startCity" id="startCity" required />
+      <label for="startDate"> Data de sortida </label>
+      <input type="date" name="startDate" id="startDate" required />
+      <label for="startTime"> Hora de sortida </label>
+      <input type="time" name="startTime" id="startTime" required />
+      <label for="endCity"> Ciutat d'arribada </label>
+      <input type="text" name="endCity" id="endCity" required />
+      <label for="endDate"> Data d'arribada </label>
+      <input type="date" name="endDate" id="endDate" required />
+      <label for="endTime"> Hora d'arribada </label>
+      <input type="time" name="endTime" id="endTime" required />
+      <h3>Càrregues</h3>
+      <div id="loadsContainer"></div>
+      <button type="button" id="addLoad">Afegir càrrega</button>
+      <h3>Descàrregues</h3>
+      <div id="unloadsContainer"></div>
+      <button type="button">Afegir descàrrega</button>
+      <h3>Quilòmetres</h3>
+      <label for="kmStart"> Quilòmetres inicials </label>
+      <input type="number" name="kmStart" id="kmStart" required />
+      <label for="kmEnd"> Quilòmetres finals </label>
+      <input type="number" name="kmEnd" id=" kmEnd" required />
+      <label for="kmTotal"> Quilòmetres totals </label>
+      <input type="text" name="kmTotal" id="kmTotal" readonly />
+      <label for="driveTime"> Temps de conducció </label>
+      <input
+        type="text"
+        name="driveTime"
+        id="driveTime"
+        placeholder="ex: 8H30"
+        required
+      />
+      <h3>Observacions</h3>
+      <textarea
+        name="observations"
+        id="observations"
+        rows="4"
+        placeholder="Incidents, notes..."
+      ></textarea>
+      <h3>Adjunts</h3>
+      <label for="fuelReceipts"> Tiquets de repostatge </label>
+      <input
+        type="file"
+        name="fuelReceipts"
+        id="fuelReceipts"
+        accept="image/*"
+        multiple
+      />
+      <label for="waybills"> Albarans </label>
+      <input
+        type="file"
+        name="waybills"
+        id="waybills"
+        accept="image/*"
+        multiple
+      />
+      <label for="otherDocs"> Altra documentació </label>
+      <input
+        type="file"
+        name="otherDocs"
+        id="otherDocs"
+        accept="image/*"
+        multiple
+      />
+    </section>
 
     <script type="module" src="js/main.js"></script>
   </body>

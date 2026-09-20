@@ -12,8 +12,8 @@
   --color-border: #334155;
   --color-success: #22c55e;
   --color-error: #ef4444;
-  --font-heading: 'Oswald', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
   --radius: 8px;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
@@ -37,18 +37,19 @@ body {
 }
 
 /* Headings */
-h1 {
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
-  font-size: 2rem;
   color: var(--color-primary);
+}
+
+h1 {
   margin-bottom: 2rem;
   text-align: center;
 }
 
 h2 {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: var(--color-secondary);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--color-border);
@@ -57,8 +58,37 @@ h2 {
 /* Sections */
 section {
   background-color: var(--color-surface);
-  border-radius: var(--radius);
+  border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: var(--shadow);
+}
+/* Form elements */
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-family: var(--font-body);
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+input[readonly] {
+  background-color: #1e293b;
+  cursor: not-allowed;
 }
