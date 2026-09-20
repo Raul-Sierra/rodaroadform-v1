@@ -1,0 +1,29 @@
+/* Layout */
+section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 1rem;
+  align-items: center;
+}
+
+section label {
+  grid-column: 1;
+}
+
+section input,
+section select,
+section textarea {
+  grid-column: 2;
+}
+
+h3 {
+  grid-column: 1 / -1;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+button {
+  grid-column: 1 / -1;
+}
