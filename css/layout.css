@@ -36,7 +36,7 @@
 }
 
 /* Layout */
-section {
+.form-section {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.4rem 1.2rem;
@@ -45,18 +45,16 @@ section {
   margin-bottom: 0.8rem;
 }
 
-section label {
+.form__label {
   grid-column: 1;
 }
 
-section input,
-section select,
-section textarea {
+.form__input {
   grid-column: 2;
 }
 
-h2,
-h3 {
+.section-title,
+.section-subtitle {
   grid-column: 1 / -1;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
@@ -66,61 +64,70 @@ h3 {
   letter-spacing: 0.05em;
 }
 
-button {
+.form-button {
   grid-column: 1 / -1;
 }
 
-#refuelSection {
+/* Toggleable sections (refuel, dual driver) */
+.refuel-section,
+.second-driver-section {
   grid-column: 1 / -1;
   display: none;
+}
+
+.refuel-section.visible,
+.second-driver-section.visible {
+  display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.4rem 1.2rem;
   align-items: center;
+}
+
+.refuel-section.visible {
   margin-top: 1rem;
   padding: 1.2rem;
   background-color: rgba(251, 191, 36, 0.05);
-  border-radius: 6px;
+  border-radius: var(--radius);
 }
 
-#secondDriverFields {
-  grid-column: 1 / -1;
-  display: none;
-}
 /* Mobile: 1 column */
 @media (max-width: 600px) {
   body {
     padding: 1rem;
   }
 
-  section {
+  .form-section {
     grid-template-columns: 1fr;
     gap: 0.1rem 0.8rem;
     padding: 1.2rem;
     margin-bottom: 1.5rem;
   }
-  section label {
+
+  .form__label,
+  .form__input {
     grid-column: 1;
   }
-  section input,
-  section select,
-  section textarea {
-    grid-column: 1;
-  }
-  #refuelSection {
+
+  .refuel-section.visible,
+  .second-driver-section.visible {
     grid-template-columns: 1fr;
     gap: 0.1rem 0.8rem;
+  }
+
+  .refuel-section.visible {
     padding: 0.8rem;
   }
 
-  h2,
-  h3 {
-    grid-column: 1;
-  }
-  button {
+  .section-title,
+  .section-subtitle {
     grid-column: 1;
   }
 
-  label {
+  .form-button {
+    grid-column: 1;
+  }
+
+  .form__label {
     margin-top: 1.5rem;
   }
 }

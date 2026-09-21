@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ca">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,66 +16,117 @@
         <p class="subtitle">Formulari de conductors</p>
       </div>
     </header>
-    <section id="driver">
-      <h2><i data-lucide="user"></i> Conductor</h2>
-      <label for="driverNumber"
+    <section id="driver" class="form-section">
+      <h2 class="section-title"><i data-lucide="user"></i> Conductor</h2>
+      <label class="form__label" for="driverNumber"
         ><i data-lucide="hash"></i> Número de conductor</label
       >
-      <input type="text" name="driverNumber" id="driverNumber" required />
-      <label for="driverName"
+      <input
+        class="form__input"
+        type="text"
+        name="driverNumber"
+        id="driverNumber"
+        required
+      />
+      <label class="form__label" for="driverName"
         ><i data-lucide="badge"></i> Nom del conductor</label
       >
-      <input type="text" name="driverName" id="driverName" required />
-      <label for="dualDriving">
-        <input type="checkbox" name="dualDriving" id="dualDriving" />
+      <input
+        class="form__input"
+        type="text"
+        name="driverName"
+        id="driverName"
+        required
+      />
+      <label class="form__label" for="dualDriving">
+        <input
+          class="form__input"
+          type="checkbox"
+          name="dualDriving"
+          id="dualDriving"
+        />
         Conducció doble
       </label>
-      <div id="secondDriverInfo">
-        <label for="driverName2"
+      <div id="secondDriverInfo" class="second-driver-section">
+        <label class="form__label" for="driverName2"
           ><i data-lucide="badge"></i> Nom 2n conductor</label
         >
-        <input type="text" name="driverName2" id="driverName2" />
-        <label for="driverNumber2"
+        <input
+          class="form__input"
+          type="text"
+          name="driverName2"
+          id="driverName2"
+        />
+        <label class="form__label" for="driverNumber2"
           ><i data-lucide="hash"></i> Número 2n conductor</label
         >
-        <input type="text" name="driverNumber2" id="driverNumber2" />
+        <input
+          class="form__input"
+          type="text"
+          name="driverNumber2"
+          id="driverNumber2"
+        />
       </div>
     </section>
-    <section id="vehicle">
-      <h2><i data-lucide="truck"></i> Vehicle</h2>
+    <section id="vehicle" class="form-section">
+      <h2 class="section-title"><i data-lucide="truck"></i> Vehicle</h2>
 
-      <label for="truckNumber"
+      <label class="form__label" for="truckNumber"
         ><i data-lucide="hash"></i> Número de camió</label
       >
-      <input type="text" name="truckNumber" id="truckNumber" required />
+      <input
+        class="form__input"
+        type="text"
+        name="truckNumber"
+        id="truckNumber"
+        required
+      />
 
-      <label for="tractorPlate"
+      <label class="form__label" for="tractorPlate"
         ><i data-lucide="rectangle-horizontal"></i> Matrícula tractora</label
       >
-      <input type="text" name="tractorPlate" id="tractorPlate" required />
+      <input
+        class="form__input"
+        type="text"
+        name="tractorPlate"
+        id="tractorPlate"
+        required
+      />
 
-      <label for="trailerPlate"
+      <label class="form__label" for="trailerPlate"
         ><i data-lucide="rectangle-horizontal"></i> Matrícula remolc</label
       >
-      <input type="text" name="trailerPlate" id="trailerPlate" required />
+      <input
+        class="form__input"
+        type="text"
+        name="trailerPlate"
+        id="trailerPlate"
+        required
+      />
 
-      <label for="refueled"
+      <label class="form__label" for="refueled"
         ><i data-lucide="fuel"></i> Has fet repostatge</label
       >
-      <select name="refueled" id="refueled">
+      <select class="form__input" name="refueled" id="refueled">
         <option value="no">No</option>
         <option value="yes">Sí</option>
       </select>
-      <div id="refuelSection">
-        <label for="fuelLocation"
+      <div id="refuelSection" class="refuel-section">
+        <label class="form__label" for="fuelLocation"
           ><i data-lucide="map-pin"></i> Lloc del repostatge</label
         >
-        <input type="text" name="fuelLocation" id="fuelLocation" />
+        <input
+          class="form__input"
+          type="text"
+          name="fuelLocation"
+          id="fuelLocation"
+        />
 
-        <label for="fuelDieselA"
+        <label class="form__label" for="fuelDieselA"
           ><i data-lucide="droplets"></i> Gasoil A (litres)</label
         >
         <input
+          class="form__input"
           type="number"
           name="fuelDieselA"
           id="fuelDieselA"
@@ -83,10 +134,11 @@
           step="0.01"
         />
 
-        <label for="fuelDieselB"
+        <label class="form__label" for="fuelDieselB"
           ><i data-lucide="droplets"></i> Gasoil B (litres)</label
         >
         <input
+          class="form__input"
           type="number"
           name="fuelDieselB"
           id="fuelDieselB"
@@ -94,10 +146,11 @@
           step="0.01"
         />
 
-        <label for="fuelAdBlue"
+        <label class="form__label" for="fuelAdBlue"
           ><i data-lucide="droplet"></i> AdBlue (litres)</label
         >
         <input
+          class="form__input"
           type="number"
           name="fuelAdBlue"
           id="fuelAdBlue"
@@ -105,137 +158,211 @@
           step="0.01"
         />
 
-        <label for="fuelGas"><i data-lucide="flame"></i> Gas (Kg)</label>
-        <input type="number" name="fuelGas" id="fuelGas" min="0" step="0.01" />
+        <label class="form__label" for="fuelGas"
+          ><i data-lucide="flame"></i> Gas (Kg)</label
+        >
+        <input
+          class="form__input"
+          type="number"
+          name="fuelGas"
+          id="fuelGas"
+          min="0"
+          step="0.01"
+        />
 
-        <label for="fuelKm"><i data-lucide="gauge"></i> Quilómetres</label>
-        <input type="number" name="fuelKm" id="fuelKm" />
+        <label class="form__label" for="fuelKm"
+          ><i data-lucide="gauge"></i> Quilómetres</label
+        >
+        <input class="form__input" type="number" name="fuelKm" id="fuelKm" />
       </div>
     </section>
-    <section id="trip">
-      <h2><i data-lucide="map-pin"></i> Viatge</h2>
-      <label for="client"
+    <section id="trip" class="form-section">
+      <h2 class="section-title"><i data-lucide="map-pin"></i> Viatge</h2>
+      <label class="form__label" for="client"
         ><i data-lucide="building-2"></i> Client/Empresa</label
       >
-      <input type="text" name="client" id="client" required />
-      <label for="startCity"
+      <input class="form__input" type="text" name="client" id="client" required />
+      <label class="form__label" for="startCity"
         ><i data-lucide="map-pin"></i> Ciutat d'inici</label
       >
-      <input type="text" name="startCity" id="startCity" required />
-      <label for="startDate"
+      <input
+        class="form__input"
+        type="text"
+        name="startCity"
+        id="startCity"
+        required
+      />
+      <label class="form__label" for="startDate"
         ><i data-lucide="calendar"></i> Data de sortida</label
       >
-      <input type="date" name="startDate" id="startDate" required />
-      <label for="startTime"><i data-lucide="clock"></i> Hora de sortida</label>
-      <input type="time" name="startTime" id="startTime" required />
-      <label for="endCity"><i data-lucide="flag"></i> Ciutat d'arribada</label>
-      <input type="text" name="endCity" id="endCity" required />
-      <label for="endDate"
+      <input
+        class="form__input"
+        type="date"
+        name="startDate"
+        id="startDate"
+        required
+      />
+      <label class="form__label" for="startTime"
+        ><i data-lucide="clock"></i> Hora de sortida</label
+      >
+      <input
+        class="form__input"
+        type="time"
+        name="startTime"
+        id="startTime"
+        required
+      />
+      <label class="form__label" for="endCity"
+        ><i data-lucide="flag"></i> Ciutat d'arribada</label
+      >
+      <input
+        class="form__input"
+        type="text"
+        name="endCity"
+        id="endCity"
+        required
+      />
+      <label class="form__label" for="endDate"
         ><i data-lucide="calendar-check"></i> Data d'arribada</label
       >
-      <input type="date" name="endDate" id="endDate" required />
-      <label for="endTime"><i data-lucide="clock-3"></i> Hora d'arribada</label>
-      <input type="time" name="endTime" id="endTime" required />
-      <h3><i data-lucide="package-plus"></i> Càrregues</h3>
+      <input
+        class="form__input"
+        type="date"
+        name="endDate"
+        id="endDate"
+        required
+      />
+      <label class="form__label" for="endTime"
+        ><i data-lucide="clock-3"></i> Hora d'arribada</label
+      >
+      <input
+        class="form__input"
+        type="time"
+        name="endTime"
+        id="endTime"
+        required
+      />
+      <h3 class="section-subtitle">
+        <i data-lucide="package-plus"></i> Càrregues
+      </h3>
       <div id="loadsContainer"></div>
-      <button type="button" id="addLoad">+ Afegir càrrega</button>
-      <h3><i data-lucide="package-minus"></i> Descàrregues</h3>
+      <button type="button" id="addLoad" class="form-button">
+        + Afegir càrrega
+      </button>
+      <h3 class="section-subtitle">
+        <i data-lucide="package-minus"></i> Descàrregues
+      </h3>
       <div id="unloadsContainer"></div>
-      <button type="button">+ Afegir descàrrega</button>
-      <h3><i data-lucide="gauge"></i> Quilòmetres</h3>
-      <label for="kmStart"
+      <button type="button" id="addUnload" class="form-button">
+        + Afegir descàrrega
+      </button>
+      <h3 class="section-subtitle">
+        <i data-lucide="gauge"></i> Quilòmetres
+      </h3>
+      <label class="form__label" for="kmStart"
         ><i data-lucide="play"></i> Quilòmetres inicials</label
       >
-      <input type="number" name="kmStart" id="kmStart" required />
-      <label for="kmEnd"><i data-lucide="flag"></i> Quilòmetres finals</label>
-      <input type="number" name="kmEnd" id="kmEnd" required />
-      <label for="kmTotal"
+      <input
+        class="form__input"
+        type="number"
+        name="kmStart"
+        id="kmStart"
+        required
+      />
+      <label class="form__label" for="kmEnd"
+        ><i data-lucide="flag"></i> Quilòmetres finals</label
+      >
+      <input
+        class="form__input"
+        type="number"
+        name="kmEnd"
+        id="kmEnd"
+        required
+      />
+      <label class="form__label" for="kmTotal"
         ><i data-lucide="route"></i> Quilòmetres totals</label
       >
-      <input type="text" name="kmTotal" id="kmTotal" readonly />
-      <label for="driveTime"
+      <input
+        class="form__input"
+        type="text"
+        name="kmTotal"
+        id="kmTotal"
+        readonly
+      />
+      <label class="form__label" for="driveTime"
         ><i data-lucide="timer"></i> Temps de conducció</label
       >
       <input
+        class="form__input"
         type="text"
         name="driveTime"
         id="driveTime"
         placeholder="ex: 8H30"
         required
       />
-      <div id="secondDriverFields">
-        <label for="driveTime2"
+      <div id="secondDriverFields" class="second-driver-section">
+        <label class="form__label" for="driveTime2"
           ><i data-lucide="timer"></i> Temps de conducció 2n conductor</label
         >
         <input
+          class="form__input"
           type="text"
           name="driveTime2"
           id="driveTime2"
           placeholder="ex: 8H30"
         />
       </div>
-      <label for="perDiemCountry"
+      <label class="form__label" for="perDiemCountry"
         ><i data-lucide="earth"></i> Dieta / País</label
       >
-      <select id="perDiemCountry" name="perDiemCountry" required>
+      <select
+        class="form__input"
+        id="perDiemCountry"
+        name="perDiemCountry"
+        required
+      >
         <option value="">Selecciona país</option>
-        <option value="AT">Àustria</option>
-        <option value="BE">Bèlgica</option>
-        <option value="BG">Bulgària</option>
-        <option value="HR">Croàcia</option>
-        <option value="DK">Dinamarca</option>
-        <option value="SK">Eslovàquia</option>
-        <option value="SI">Eslovènia</option>
-        <option value="ES">Espanya</option>
-        <option value="EE">Estònia</option>
-        <option value="FI">Finlàndia</option>
-        <option value="FR">França</option>
-        <option value="DE">Alemanya</option>
-        <option value="GR">Grècia</option>
-        <option value="HU">Hongria</option>
-        <option value="IE">Irlanda</option>
-        <option value="IT">Itàlia</option>
-        <option value="LV">Letònia</option>
-        <option value="LT">Lituània</option>
-        <option value="LU">Luxemburg</option>
-        <option value="MT">Malta</option>
-        <option value="NL">Països Baixos</option>
-        <option value="PL">Polònia</option>
-        <option value="PT">Portugal</option>
-        <option value="CZ">República Txeca</option>
-        <option value="RO">Romania</option>
-        <option value="SE">Suècia</option>
       </select>
-      <h3><i data-lucide="file-text"></i> Observacions</h3>
+      <h3 class="section-subtitle">
+        <i data-lucide="file-text"></i> Observacions
+      </h3>
       <textarea
+        class="form__input"
         name="observations"
         id="observations"
         rows="4"
         placeholder="Incidents, notes..."
       ></textarea>
-      <h3><i data-lucide="paperclip"></i> Adjunts</h3>
-      <label for="fuelReceipts"
+      <h3 class="section-subtitle">
+        <i data-lucide="paperclip"></i> Adjunts
+      </h3>
+      <label class="form__label" for="fuelReceipts"
         ><i data-lucide="receipt"></i> Tiquets de repostatge</label
       >
       <input
+        class="form__input"
         type="file"
         name="fuelReceipts"
         id="fuelReceipts"
         accept="image/*"
         multiple
       />
-      <label for="waybills"><i data-lucide="file-check"></i> Albarans</label>
+      <label class="form__label" for="waybills"
+        ><i data-lucide="file-check"></i> Albarans</label
+      >
       <input
+        class="form__input"
         type="file"
         name="waybills"
         id="waybills"
         accept="image/*"
         multiple
       />
-      <label for="otherDocs"
+      <label class="form__label" for="otherDocs"
         ><i data-lucide="folder-open"></i> Altra documentació</label
       >
       <input
+        class="form__input"
         type="file"
         name="otherDocs"
         id="otherDocs"
@@ -245,9 +372,6 @@
     </section>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
