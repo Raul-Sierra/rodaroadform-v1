@@ -72,7 +72,7 @@ button {
 
 #refuelSection {
   grid-column: 1 / -1;
-  display: grid;
+  display: none;
   grid-template-columns: auto 1fr;
   gap: 0.4rem 1.2rem;
   align-items: center;
@@ -80,6 +80,11 @@ button {
   padding: 1.2rem;
   background-color: rgba(251, 191, 36, 0.05);
   border-radius: 6px;
+}
+
+#secondDriverFields {
+  grid-column: 1 / -1;
+  display: none;
 }
 /* Mobile: 1 column */
 @media (max-width: 600px) {
@@ -106,6 +111,7 @@ button {
     gap: 0.1rem 0.8rem;
     padding: 0.8rem;
   }
+
   h2,
   h3 {
     grid-column: 1;

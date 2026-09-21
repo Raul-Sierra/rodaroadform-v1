@@ -12,24 +12,34 @@
         <i data-lucide="truck"></i>
       </div>
       <div>
-        <h1>Diari de Ruta</h1>
+        <h1>full de Ruta</h1>
         <p class="subtitle">Formulari de conductors</p>
       </div>
     </header>
     <section id="driver">
       <h2><i data-lucide="user"></i> Conductor</h2>
-      <label for="driverName"
-        ><i data-lucide="badge"></i> Nom del conductor</label
-      >
-      <input type="text" name="driverName" id="driverName" required />
       <label for="driverNumber"
         ><i data-lucide="hash"></i> Número de conductor</label
       >
       <input type="text" name="driverNumber" id="driverNumber" required />
+      <label for="driverName"
+        ><i data-lucide="badge"></i> Nom del conductor</label
+      >
+      <input type="text" name="driverName" id="driverName" required />
       <label for="dualDriving">
         <input type="checkbox" name="dualDriving" id="dualDriving" />
         Conducció doble
       </label>
+      <div id="secondDriverInfo">
+        <label for="driverName2"
+          ><i data-lucide="badge"></i> Nom 2n conductor</label
+        >
+        <input type="text" name="driverName2" id="driverName2" />
+        <label for="driverNumber2"
+          ><i data-lucide="hash"></i> Número 2n conductor</label
+        >
+        <input type="text" name="driverNumber2" id="driverNumber2" />
+      </div>
     </section>
     <section id="vehicle">
       <h2><i data-lucide="truck"></i> Vehicle</h2>
@@ -153,7 +163,20 @@
         placeholder="ex: 8H30"
         required
       />
-      <label for="perDiemCountry"><i data-lucide="earth"></i> Dieta / País</label>
+      <div id="secondDriverFields">
+        <label for="driveTime2"
+          ><i data-lucide="timer"></i> Temps de conducció 2n conductor</label
+        >
+        <input
+          type="text"
+          name="driveTime2"
+          id="driveTime2"
+          placeholder="ex: 8H30"
+        />
+      </div>
+      <label for="perDiemCountry"
+        ><i data-lucide="earth"></i> Dieta / País</label
+      >
       <select id="perDiemCountry" name="perDiemCountry" required>
         <option value="">Selecciona país</option>
         <option value="AT">Àustria</option>
